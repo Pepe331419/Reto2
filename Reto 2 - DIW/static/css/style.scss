@@ -1,0 +1,139 @@
+@use "vars";
+@use "header";
+@use "footer";
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin:0;
+}
+
+main{
+    background-color: vars.$color_fondo_pagina;
+    margin: 0;
+    padding: 2rem 0 2rem 0;
+}
+
+section.boxed{
+    max-width: vars.$ancho_pagina;
+    background-color: vars.$color_fondo_boxed;
+    margin:auto;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    border-radius: 20px;
+
+    h1{
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        color: vars.$color_letra_menu;
+    }
+
+    h2 {
+        padding-bottom: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    * {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    p{
+        margin-bottom: 3rem;
+    }
+
+    iframe{
+        margin-top: 1rem;
+        border: 0;
+    }
+
+    div.col2{
+        display:flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 1rem;
+
+        div.variantSelected{
+            background-color: #FFFFFF;
+            flex: 1;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            border: solid 2px vars.$color_letra_menu;
+            border-radius: 25px;
+            height: fit-content;
+
+            img{
+                height: 192px;
+                margin: 0;
+            }
+        }
+
+        div.productInfo{
+            border: solid 2px vars.$color_letra_menu;
+            background-color: #FFFFFF;
+            border-radius: 25px;
+            flex: 2.5;
+            margin: 0;
+
+            h4, h2{
+                margin: 1rem;
+            }
+
+            p{
+                margin: 1rem;
+            }
+
+            div.variantSelector{
+                margin: 1rem;
+
+                button{
+                    height: 32px;
+                    width: 32px;
+                    margin: 0.2rem;
+                    border-radius: 50%;
+                    border: solid 2px #cccccc;
+
+                    &:hover{
+                        border: solid 2px vars.$color_letra_menu;
+                    }
+
+                    &.varAmarillo{
+                        background-color: vars.$color_variante_amarillo;
+                    }
+
+                    &.varBeige{
+                        background-color: vars.$color_variante_beige;
+                    }
+
+                    &.varNaranja{
+                        background-color: vars.$color_variante_naranja;
+                    }
+
+                    &.varMarron{
+                        background-color: vars.$color_variante_marron;
+                    }
+
+                    &.varNegro{
+                        background-color: vars.$color_variante_negro;
+                    }
+
+                    &.varVerde{
+                        background-color: vars.$color_variante_verde;
+                    }
+
+                    &.varAzul{
+                        background-color: vars.$color_variante_azul;
+                    }
+
+                    &.varRosa{
+                        background-color: vars.$color_variante_rosa;
+                    }
+                }
+            }
+        }
+    }
+
+}

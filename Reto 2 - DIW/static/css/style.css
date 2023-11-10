@@ -1,0 +1,197 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+/*
+$color_beige: #fffbb4; //Fondo página
+$color_amarillo_cla: #f1e369; //Elementos de menu sin seleccionar
+$color_amarillo_osc: #eeb713; //Menus fondo
+$color_blanco: #f9f9f9;
+$color_marron: #49382e;
+*/
+header {
+  background-color: #f1e369;
+  display: flex;
+  justify-content: space-between;
+  height: 7rem;
+  outline: solid 2px #49382e;
+}
+header img {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 1rem;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  padding: 1rem;
+  color: #49382e;
+  background-color: #fffbb4;
+  width: 9rem;
+  border-radius: 20px;
+  text-align: center;
+  margin: 0.5rem;
+  font-size: 1.25rem;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #49382e;
+}
+header nav ul li:hover {
+  background-color: #f7e640;
+  outline: solid 5px #fffbb4;
+}
+
+* {
+  --outline: solid 1px red;
+}
+
+footer {
+  background-color: #f1e369;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  outline: solid 2px #49382e;
+}
+footer * {
+  margin: 0.4rem;
+  font-weight: 300;
+  color: #49382e;
+}
+footer a {
+  text-decoration: none;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+footer ul li {
+  width: 15rem;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  background-color: #fffcc7;
+  margin: 0;
+  padding: 2rem 0 2rem 0;
+}
+
+section.boxed {
+  max-width: 960px;
+  background-color: #fffff5;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  border-radius: 20px;
+}
+section.boxed h1 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  color: #49382e;
+}
+section.boxed h2 {
+  padding-bottom: 0rem;
+  margin-bottom: 0rem;
+}
+section.boxed * {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+section.boxed p {
+  margin-bottom: 3rem;
+}
+section.boxed iframe {
+  margin-top: 1rem;
+  border: 0;
+}
+section.boxed div.col2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+}
+section.boxed div.col2 div.variantSelected {
+  background-color: #FFFFFF;
+  flex: 1;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  border: solid 2px #49382e;
+  border-radius: 25px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+section.boxed div.col2 div.variantSelected img {
+  height: 192px;
+  margin: 0;
+}
+section.boxed div.col2 div.productInfo {
+  border: solid 2px #49382e;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  flex: 2.5;
+  margin: 0;
+}
+section.boxed div.col2 div.productInfo h4, section.boxed div.col2 div.productInfo h2 {
+  margin: 1rem;
+}
+section.boxed div.col2 div.productInfo p {
+  margin: 1rem;
+}
+section.boxed div.col2 div.productInfo div.variantSelector {
+  margin: 1rem;
+}
+section.boxed div.col2 div.productInfo div.variantSelector button {
+  height: 32px;
+  width: 32px;
+  margin: 0.2rem;
+  border-radius: 50%;
+  border: solid 2px #cccccc;
+}
+section.boxed div.col2 div.productInfo div.variantSelector button:hover {
+  border: solid 2px #49382e;
+}
+section.boxed div.col2 div.productInfo div.variantSelector button.varAmarillo {
+  background-color: #fdf79c;
+}
+section.boxed div.col2 div.productInfo div.variantSelector button.varBeige {
+  background-color: #e8dfb0;
+}
+section.boxed div.col2 div.productInfo div.variantSelector button.varNaranja {
+  background-color: #fccd9c;
+}
+section.boxed div.col2 div.productInfo div.variantSelector button.varMarron {
+  background-color: #c09f7b;
+}
+section.boxed div.col2 div.productInfo div.variantSelector button.varNegro {
+  background-color: #808080;
+}
+section.boxed div.col2 div.productInfo div.variantSelector button.varVerde {
+  background-color: #89dba1;
+}
+section.boxed div.col2 div.productInfo div.variantSelector button.varAzul {
+  background-color: #94ccde;
+}
+section.boxed div.col2 div.productInfo div.variantSelector button.varRosa {
+  background-color: #fcc8c0;
+}/*# sourceMappingURL=style.css.map */

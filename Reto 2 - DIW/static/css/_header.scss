@@ -1,0 +1,49 @@
+@use "vars";
+
+header {
+    background-color: vars.$color_fondo_menu;
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+    outline: solid 2px vars.$color_letra_menu;
+
+    img {
+        width: fit-content;
+        margin-left: 1rem;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li{
+                padding: vars.$paddingheader;
+                color: vars.$color_letra_menu;
+                background-color: vars.$color_elemento_menu;
+                width: 9rem;
+                border-radius: 20px;
+                text-align: center;
+                margin: 0.5rem;
+                font-size: 1.25rem;
+
+                a{
+                    text-decoration: none;
+                    color: vars.$color_letra_menu;
+                }
+
+                &:hover{
+                    background-color: vars.$color_elemento_seleccionado;
+                    outline: solid 5px vars.$color_elemento_menu;
+                }
+            }
+        }
+
+    }
+}
