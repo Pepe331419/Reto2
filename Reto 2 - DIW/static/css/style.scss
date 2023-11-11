@@ -2,37 +2,32 @@
 @use "header";
 @use "footer";
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    margin:0;
+body {
+    margin: 0;
 }
 
-main{
+main {
     background-color: vars.$color_fondo_pagina;
     margin: 0;
     padding: 2rem 0 2rem 0;
 }
 
-section.boxed{
+section.boxed {
     max-width: vars.$ancho_pagina;
     background-color: vars.$color_fondo_boxed;
-    margin:auto;
+    margin: auto;
     padding-top: 2rem;
-    padding-bottom: 4rem;
-    border-radius: 20px;
+    padding-bottom: 2rem;
+    border-radius: 2rem;
 
-    h1{
+    h1 {
         font-size: 2rem;
         padding-bottom: 1rem;
         color: vars.$color_letra_menu;
-    }
-
-    h2 {
-        padding-bottom: 0rem;
-        margin-bottom: 0rem;
     }
 
     * {
@@ -40,100 +35,214 @@ section.boxed{
         margin-right: 2rem;
     }
 
-    p{
+    p {
         margin-bottom: 3rem;
     }
 
-    iframe{
+    iframe {
         margin-top: 1rem;
         border: 0;
     }
 
-    div.col2{
-        display:flex;
+    div.col2 {
+        display: flex;
         justify-content: space-between;
         align-items: stretch;
         gap: 1rem;
 
-        div.variantSelected{
+        div.variantSelected {
             background-color: #FFFFFF;
             flex: 1;
             margin: 0;
             display: flex;
+            align-items: center;
             justify-content: center;
             border: solid 2px vars.$color_letra_menu;
-            border-radius: 25px;
-            height: fit-content;
+            border-radius: 1.5rem;
 
-            img{
+            img {
                 height: 192px;
                 margin: 0;
             }
         }
 
-        div.productInfo{
+        div.productInfo {
             border: solid 2px vars.$color_letra_menu;
             background-color: #FFFFFF;
-            border-radius: 25px;
+            border-radius: 1.5rem;
             flex: 2.5;
             margin: 0;
 
-            h4, h2{
+            div.cost {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                margin-left: 1rem;
+                gap: 0.5rem;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    margin: 0;
+
+                    &.hidden {
+                        display: none;
+                    }
+                }
+
+                h2 {
+                    font-size: 1.25rem;
+                    margin: 0 0 0 1rem;
+                }
+
+                img.material {
+                    height: 32px;
+                    margin: 0;
+                }
+            }
+
+            h4,
+            h2 {
                 margin: 1rem;
             }
 
-            p{
+            p {
                 margin: 1rem;
             }
 
-            div.variantSelector{
+            div.variantSelector {
                 margin: 1rem;
 
-                button{
+                button {
                     height: 32px;
                     width: 32px;
                     margin: 0.2rem;
                     border-radius: 50%;
                     border: solid 2px #cccccc;
 
-                    &:hover{
+                    &:hover {
                         border: solid 2px vars.$color_letra_menu;
                     }
 
-                    &.varAmarillo{
+                    &.varAmarillo {
                         background-color: vars.$color_variante_amarillo;
                     }
 
-                    &.varBeige{
+                    &.varBeige {
                         background-color: vars.$color_variante_beige;
                     }
 
-                    &.varNaranja{
+                    &.varNaranja {
                         background-color: vars.$color_variante_naranja;
                     }
 
-                    &.varMarron{
+                    &.varMarron {
                         background-color: vars.$color_variante_marron;
                     }
 
-                    &.varNegro{
+                    &.varNegro {
                         background-color: vars.$color_variante_negro;
                     }
 
-                    &.varVerde{
+                    &.varVerde {
                         background-color: vars.$color_variante_verde;
                     }
 
-                    &.varAzul{
+                    &.varAzul {
                         background-color: vars.$color_variante_azul;
                     }
 
-                    &.varRosa{
+                    &.varRosa {
                         background-color: vars.$color_variante_rosa;
+                    }
+                }
+            }
+
+            form {
+                margin: 1rem;
+
+                input[type=button] {
+                    border: 0;
+                    margin: 0.5rem 0 0rem 0rem;
+                    padding: 0.75rem 1rem;
+                    color: vars.$color_letra_menu;
+                    background-color: vars.$color_elemento_menu;
+                    font-size: 1.25rem;
+                    border-radius: 1rem;
+
+                    &:hover {
+                        background-color: vars.$color_elemento_seleccionado;
+                        outline: solid 2px vars.$color_letra_menu;
                     }
                 }
             }
         }
     }
 
+    div.tecnicalData {
+        margin: 2rem;
+        height: fit-content;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        table {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            border-spacing: 4px 0;
+
+            th {
+                background-color: vars.$color_elemento_menu;
+                border: solid 2px vars.$color_letra_menu;
+                border-radius: 1.5rem 1.5rem 0 0;
+                border-bottom: 0;
+            }
+
+            td {
+                background-color: #FFFFFF;
+                border-radius: 0 0 1.5rem 1.5rem;
+                border: solid 2px vars.$color_letra_menu;
+                border-top: 0;
+            }
+        }
+    }
+
+    div.description {
+        background-color: #FFFFFF;
+        margin: 2rem;
+        border: solid 2px vars.$color_letra_menu;
+        border-radius: 2rem;
+        padding: 0rem 1rem;
+
+        p {
+            text-align: justify;
+            margin: 2rem 0;
+        }
+    }
+}
+
+dialog {
+    border-radius: 2rem;
+    border: solid 2px vars.$color_letra_menu;
+
+    form {
+        padding: 0.5rem;
+
+        input {
+            margin: 1rem 0;
+            border: 0;
+            padding: 0.75rem 1rem;
+            color: vars.$color_letra_menu;
+            background-color: vars.$color_elemento_menu;
+            border-radius: 1.5rem;
+
+            &:hover {
+                background-color: vars.$color_elemento_seleccionado;
+                outline: solid 2px vars.$color_letra_menu;
+            }
+        }
+    }
 }

@@ -7,5 +7,6 @@
     <link rel="stylesheet" href="static/css/style.css">
     <link href="">
     <title><?php echo $titulo; ?></title>
-    <?php if ($linkJS) echo "<script src='static/js/{$linkJS}.js'></script>"; ?>
+    <?php if (!empty($linkJS)) echo "<script src='static/js/{$linkJS}.js'></script>"; ?>
+    <script src="static/js/header.js"></script>
 </head>

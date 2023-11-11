@@ -13,6 +13,8 @@ header {
   justify-content: space-between;
   height: 7rem;
   outline: solid 2px #49382e;
+  position: sticky;
+  top: 0;
 }
 header img {
   width: -moz-fit-content;
@@ -31,14 +33,16 @@ header nav ul {
   padding: 0;
 }
 header nav ul li {
+  position: relative;
   padding: 1rem;
   color: #49382e;
   background-color: #fffbb4;
   width: 9rem;
-  border-radius: 20px;
+  border-radius: 1.5rem;
   text-align: center;
   margin: 0.5rem;
   font-size: 1.25rem;
+  transition: 0.25s;
 }
 header nav ul li a {
   text-decoration: none;
@@ -47,6 +51,119 @@ header nav ul li a {
 header nav ul li:hover {
   background-color: #f7e640;
   outline: solid 5px #fffbb4;
+}
+header nav ul li:hover ul.subMenu {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+header nav ul.subMenu {
+  margin: 0 1rem;
+  width: 11rem;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+  left: -1rem;
+  z-index: 9;
+  background-color: #f1e369;
+  padding-bottom: 1rem;
+  border-radius: 0 0 2.5rem 2.5rem;
+}
+header nav ul.subMenu li {
+  padding: 0.5rem;
+  width: 9rem;
+  font-size: 1rem;
+  background-color: #fffbb4;
+}
+header nav ul.subMenu li:hover {
+  background-color: #f7e640;
+  outline: solid 2px #fffbb4;
+}
+
+nav#menuBusqueda {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: margin-left 0.75s;
+  width: 15rem;
+  position: fixed;
+  height: 200vh;
+  top: 0;
+  bottom: 0;
+  background-color: #f1e369;
+  padding: 0 2rem 0 1rem;
+  border-right: solid 2px #49382e;
+  font-size: 0.75rem;
+  margin-left: -20rem;
+}
+nav#menuBusqueda h3 {
+  color: #49382e;
+}
+nav#menuBusqueda input[type=text] {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  outline: solid 1px #49382e;
+  border: 0;
+}
+nav#menuBusqueda input[type=text]:focus {
+  outline: solid 2px #49382e;
+}
+nav#menuBusqueda fieldset {
+  background-color: #fffbb4;
+  border: solid 1px #49382e;
+  margin: 0.75rem 0;
+  min-height: 1rem;
+  border-radius: 0.5rem;
+}
+nav#menuBusqueda fieldset legend {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+nav#menuBusqueda fieldset div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+nav#menuBusqueda fieldset div.hidden {
+  display: none;
+}
+nav#menuBusqueda fieldset div#inputPrecio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+nav#menuBusqueda fieldset div#inputPrecio.hidden {
+  display: none;
+}
+nav#menuBusqueda fieldset div#inputPrecio input[type=number] {
+  width: 8rem;
+}
+nav#menuBusqueda fieldset div#radioCurrency {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+nav#menuBusqueda fieldset div#radioCurrency.hidden {
+  display: none;
+}
+nav#menuBusqueda input[type=submit] {
+  background-color: #ffffff;
+  border: solid 1px #49382e;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+nav#menuBusqueda input[type=submit]:hover {
+  outline: solid 2px #49382e;
+  background-color: #fffbb4;
+}
+nav#menuBusqueda.reveal {
+  margin-left: 0;
 }
 
 * {
@@ -101,17 +218,13 @@ section.boxed {
   background-color: #fffff5;
   margin: auto;
   padding-top: 2rem;
-  padding-bottom: 4rem;
-  border-radius: 20px;
+  padding-bottom: 2rem;
+  border-radius: 2rem;
 }
 section.boxed h1 {
   font-size: 2rem;
   padding-bottom: 1rem;
   color: #49382e;
-}
-section.boxed h2 {
-  padding-bottom: 0rem;
-  margin-bottom: 0rem;
 }
 section.boxed * {
   margin-left: 2rem;
@@ -135,11 +248,10 @@ section.boxed div.col2 div.variantSelected {
   flex: 1;
   margin: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
   border: solid 2px #49382e;
-  border-radius: 25px;
-  height: -moz-fit-content;
-  height: fit-content;
+  border-radius: 1.5rem;
 }
 section.boxed div.col2 div.variantSelected img {
   height: 192px;
@@ -148,11 +260,35 @@ section.boxed div.col2 div.variantSelected img {
 section.boxed div.col2 div.productInfo {
   border: solid 2px #49382e;
   background-color: #FFFFFF;
-  border-radius: 25px;
+  border-radius: 1.5rem;
   flex: 2.5;
   margin: 0;
 }
-section.boxed div.col2 div.productInfo h4, section.boxed div.col2 div.productInfo h2 {
+section.boxed div.col2 div.productInfo div.cost {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 1rem;
+  gap: 0.5rem;
+}
+section.boxed div.col2 div.productInfo div.cost div {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+section.boxed div.col2 div.productInfo div.cost div.hidden {
+  display: none;
+}
+section.boxed div.col2 div.productInfo div.cost h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0 1rem;
+}
+section.boxed div.col2 div.productInfo div.cost img.material {
+  height: 32px;
+  margin: 0;
+}
+section.boxed div.col2 div.productInfo h4,
+section.boxed div.col2 div.productInfo h2 {
   margin: 1rem;
 }
 section.boxed div.col2 div.productInfo p {
@@ -194,4 +330,79 @@ section.boxed div.col2 div.productInfo div.variantSelector button.varAzul {
 }
 section.boxed div.col2 div.productInfo div.variantSelector button.varRosa {
   background-color: #fcc8c0;
+}
+section.boxed div.col2 div.productInfo form {
+  margin: 1rem;
+}
+section.boxed div.col2 div.productInfo form input[type=button] {
+  border: 0;
+  margin: 0.5rem 0 0rem 0rem;
+  padding: 0.75rem 1rem;
+  color: #49382e;
+  background-color: #fffbb4;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+}
+section.boxed div.col2 div.productInfo form input[type=button]:hover {
+  background-color: #f7e640;
+  outline: solid 2px #49382e;
+}
+section.boxed div.tecnicalData {
+  margin: 2rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+section.boxed div.tecnicalData table {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  border-spacing: 4px 0;
+}
+section.boxed div.tecnicalData table th {
+  background-color: #fffbb4;
+  border: solid 2px #49382e;
+  border-radius: 1.5rem 1.5rem 0 0;
+  border-bottom: 0;
+}
+section.boxed div.tecnicalData table td {
+  background-color: #FFFFFF;
+  border-radius: 0 0 1.5rem 1.5rem;
+  border: solid 2px #49382e;
+  border-top: 0;
+}
+section.boxed div.description {
+  background-color: #FFFFFF;
+  margin: 2rem;
+  border: solid 2px #49382e;
+  border-radius: 2rem;
+  padding: 0rem 1rem;
+}
+section.boxed div.description p {
+  text-align: justify;
+  margin: 2rem 0;
+}
+
+dialog {
+  border-radius: 2rem;
+  border: solid 2px #49382e;
+}
+dialog form {
+  padding: 0.5rem;
+}
+dialog form input {
+  margin: 1rem 0;
+  border: 0;
+  padding: 0.75rem 1rem;
+  color: #49382e;
+  background-color: #fffbb4;
+  border-radius: 1.5rem;
+}
+dialog form input:hover {
+  background-color: #f7e640;
+  outline: solid 2px #49382e;
 }/*# sourceMappingURL=style.css.map */
