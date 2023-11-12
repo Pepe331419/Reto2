@@ -8,6 +8,7 @@ header {
     outline: solid 2px vars.$color_letra_menu;
     position: sticky;
     top: 0;
+    z-index: 8;
 
     img {
         width: fit-content;
@@ -102,6 +103,7 @@ nav#menuBusqueda {
     border-right: solid 2px vars.$color_letra_menu;
     font-size: 0.75rem;
     margin-left: -20rem;
+    z-index: 9;
 
     h3{
         color: vars.$color_letra_menu;

@@ -1,6 +1,7 @@
 @use "vars";
 @use "header";
 @use "footer";
+@use "micuenta";
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -245,4 +246,104 @@ dialog {
             }
         }
     }
+}
+
+main.login {
+    text-align: center;
+
+    div.login {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+
+        div.column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+
+            div.hidden{
+                display: none;
+            }
+        }
+
+        div#recoverPassword{
+            margin: 0;
+        }
+
+        div form {
+            text-align: left;
+            width: 18rem;
+            padding: 3rem 1rem;
+            border-radius: 2rem;
+            border: solid 2px vars.$color_letra_menu;
+            background-color: vars.$color_elemento_menu;
+            margin: 0rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            input[type=text],
+            input[type=password],
+            input[type=mail] {
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+                outline: solid 1px vars.$color_letra_menu;
+                border: 0;
+                color: vars.$color_letra_menu;
+
+                &:focus {
+                    outline: solid 2px vars.$color_letra_menu;
+                }
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                margin: 0.5rem 2rem;
+
+                input[type=checkbox] {
+                    margin: 0;
+                }
+
+                label {
+                    margin: 0 0 0 0.5rem;
+                    font-size: 0.65rem;
+                }
+            }
+
+            input[type=submit] {
+                background-color: #ffffff;
+                border: solid 1px vars.$color_letra_menu;
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+
+                &:hover {
+                    outline: solid 2px vars.$color_letra_menu;
+                    background-color: vars.$color_fondo_menu;
+                }
+            }
+
+            button#btnForgotPassword {
+                background-color: #ffffff;
+                border: solid 1px vars.$color_letra_menu;
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+
+                &:hover {
+                    outline: solid 2px vars.$color_letra_menu;
+                    background-color: vars.$color_fondo_menu;
+                }
+            }
+
+            input#recoverMail{
+                margin-bottom: 1rem;
+            }
+        }
+
+    }
+
+
 }

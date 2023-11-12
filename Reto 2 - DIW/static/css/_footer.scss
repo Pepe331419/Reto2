@@ -1,9 +1,5 @@
 @use "vars";
 
-*{
-    --outline: solid 1px red;
-}
-
 footer{
     background-color: vars.$color_fondo_menu;
     display: flex;
@@ -12,6 +8,7 @@ footer{
     justify-content: center;
     padding: vars.$paddingheader;
     outline: solid 2px vars.$color_letra_menu;
+    z-index: 9;
 
     *{
         margin: 0.4rem;

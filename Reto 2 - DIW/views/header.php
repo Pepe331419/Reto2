@@ -42,7 +42,7 @@
     <nav>
         <ul>
             <li><a href="#" id="btnBusqueda">Búsqueda</a></li>
-            <li><a href="#">Mi cuenta</a></li>
+            <li><a href="login.php">Mi cuenta</a></li>
         </ul>
     </nav>
 </header>

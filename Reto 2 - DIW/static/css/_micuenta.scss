@@ -1,0 +1,121 @@
+@use "vars";
+
+main.miCuenta {
+
+    div:has(table) {
+        margin: 2rem;
+        height: 25rem;
+        overflow-y: scroll;
+        position: relative;
+        z-index: 7;
+        width: fit-content;
+
+
+        table {
+            border-collapse: collapse;
+            width: 51rem;
+            background-color: #FFFFFF;
+
+            thead th {
+                background-color: vars.$color_elemento_seleccionado;
+            }
+
+            tbody th {
+                background-color: vars.$color_fondo_menu;
+            }
+
+            tbody tr:nth-child(2n-1) {
+                background-color: vars.$color_fondo_pagina;
+            }
+
+            img {
+                padding: 0.1rem 0;
+                height: 24px;
+                width: 20px;
+                margin: 0;
+            }
+
+            button {
+                border: solid 1px vars.$color_letra_menu;
+                border-radius: 5px;
+                background-color: vars.$color_fondo_pagina;
+                width: fit-content;
+                margin: 1rem 0 0 0;
+            }
+
+            td,
+            th {
+                border: solid 1px #000000;
+                text-align: left;
+                padding: 0.1rem 0 0.1rem 0.5rem;
+                height: 2rem;
+            }
+
+            a {
+                text-decoration: none;
+                text-align: right;
+                font-size: 0.75rem;
+                color: vars.$color_letra_menu;
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    form#modifyInfo {
+        display: flex;
+        flex-direction: column;
+
+        fieldset {
+            display: flex;
+            margin: 0 0 1rem 0;
+            border: solid 1px vars.$color_letra_menu;
+            border-radius: 1rem;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 8rem;
+        }
+
+        input[type=mail] {
+            width: 15rem;
+        }
+
+        input {
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            outline: solid 1px vars.$color_letra_menu;
+            border: 0;
+
+            &:focus {
+                outline: solid 2px vars.$color_letra_menu;
+            }
+        }
+
+        input,
+        label {
+            margin: 0 0.25rem;
+        }
+
+        input#currentPassword {
+            width: 15rem;
+        }
+
+        input[type=submit] {
+            margin-top: 1.5rem;
+            width: 10rem;
+            background-color: #ffffff;
+            border: solid 1px vars.$color_letra_menu;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+
+            &:hover {
+                outline: solid 2px vars.$color_letra_menu;
+                background-color: vars.$color_elemento_menu;
+            }
+        }
+    }
+
+}

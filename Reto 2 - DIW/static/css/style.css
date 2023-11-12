@@ -15,6 +15,7 @@ header {
   outline: solid 2px #49382e;
   position: sticky;
   top: 0;
+  z-index: 8;
 }
 header img {
   width: -moz-fit-content;
@@ -98,6 +99,7 @@ nav#menuBusqueda {
   border-right: solid 2px #49382e;
   font-size: 0.75rem;
   margin-left: -20rem;
+  z-index: 9;
 }
 nav#menuBusqueda h3 {
   color: #49382e;
@@ -166,10 +168,6 @@ nav#menuBusqueda.reveal {
   margin-left: 0;
 }
 
-* {
-  --outline: solid 1px red;
-}
-
 footer {
   background-color: #f1e369;
   display: flex;
@@ -178,6 +176,7 @@ footer {
   justify-content: center;
   padding: 1rem;
   outline: solid 2px #49382e;
+  z-index: 9;
 }
 footer * {
   margin: 0.4rem;
@@ -197,6 +196,105 @@ footer ul {
 }
 footer ul li {
   width: 15rem;
+}
+
+main.miCuenta div:has(table) {
+  margin: 2rem;
+  height: 25rem;
+  overflow-y: scroll;
+  position: relative;
+  z-index: 7;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main.miCuenta div:has(table) table {
+  border-collapse: collapse;
+  width: 51rem;
+  background-color: #FFFFFF;
+}
+main.miCuenta div:has(table) table thead th {
+  background-color: #f7e640;
+}
+main.miCuenta div:has(table) table tbody th {
+  background-color: #f1e369;
+}
+main.miCuenta div:has(table) table tbody tr:nth-child(2n-1) {
+  background-color: #fffcc7;
+}
+main.miCuenta div:has(table) table img {
+  padding: 0.1rem 0;
+  height: 24px;
+  width: 20px;
+  margin: 0;
+}
+main.miCuenta div:has(table) table button {
+  border: solid 1px #49382e;
+  border-radius: 5px;
+  background-color: #fffcc7;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1rem 0 0 0;
+}
+main.miCuenta div:has(table) table td,
+main.miCuenta div:has(table) table th {
+  border: solid 1px #000000;
+  text-align: left;
+  padding: 0.1rem 0 0.1rem 0.5rem;
+  height: 2rem;
+}
+main.miCuenta div:has(table) table a {
+  text-decoration: none;
+  text-align: right;
+  font-size: 0.75rem;
+  color: #49382e;
+  margin-left: 1rem;
+}
+main.miCuenta form#modifyInfo {
+  display: flex;
+  flex-direction: column;
+}
+main.miCuenta form#modifyInfo fieldset {
+  display: flex;
+  margin: 0 0 1rem 0;
+  border: solid 1px #49382e;
+  border-radius: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+main.miCuenta form#modifyInfo input[type=text],
+main.miCuenta form#modifyInfo input[type=password] {
+  width: 8rem;
+}
+main.miCuenta form#modifyInfo input[type=mail] {
+  width: 15rem;
+}
+main.miCuenta form#modifyInfo input {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  outline: solid 1px #49382e;
+  border: 0;
+}
+main.miCuenta form#modifyInfo input:focus {
+  outline: solid 2px #49382e;
+}
+main.miCuenta form#modifyInfo input,
+main.miCuenta form#modifyInfo label {
+  margin: 0 0.25rem;
+}
+main.miCuenta form#modifyInfo input#currentPassword {
+  width: 15rem;
+}
+main.miCuenta form#modifyInfo input[type=submit] {
+  margin-top: 1.5rem;
+  width: 10rem;
+  background-color: #ffffff;
+  border: solid 1px #49382e;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+main.miCuenta form#modifyInfo input[type=submit]:hover {
+  outline: solid 2px #49382e;
+  background-color: #fffbb4;
 }
 
 * {
@@ -405,4 +503,88 @@ dialog form input {
 dialog form input:hover {
   background-color: #f7e640;
   outline: solid 2px #49382e;
+}
+
+main.login {
+  text-align: center;
+}
+main.login div.login {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+main.login div.login div.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+main.login div.login div.column div.hidden {
+  display: none;
+}
+main.login div.login div#recoverPassword {
+  margin: 0;
+}
+main.login div.login div form {
+  text-align: left;
+  width: 18rem;
+  padding: 3rem 1rem;
+  border-radius: 2rem;
+  border: solid 2px #49382e;
+  background-color: #fffbb4;
+  margin: 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main.login div.login div form input[type=text],
+main.login div.login div form input[type=password],
+main.login div.login div form input[type=mail] {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  outline: solid 1px #49382e;
+  border: 0;
+  color: #49382e;
+}
+main.login div.login div form input[type=text]:focus,
+main.login div.login div form input[type=password]:focus,
+main.login div.login div form input[type=mail]:focus {
+  outline: solid 2px #49382e;
+}
+main.login div.login div form div {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 2rem;
+}
+main.login div.login div form div input[type=checkbox] {
+  margin: 0;
+}
+main.login div.login div form div label {
+  margin: 0 0 0 0.5rem;
+  font-size: 0.65rem;
+}
+main.login div.login div form input[type=submit] {
+  background-color: #ffffff;
+  border: solid 1px #49382e;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+main.login div.login div form input[type=submit]:hover {
+  outline: solid 2px #49382e;
+  background-color: #f1e369;
+}
+main.login div.login div form button#btnForgotPassword {
+  background-color: #ffffff;
+  border: solid 1px #49382e;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+main.login div.login div form button#btnForgotPassword:hover {
+  outline: solid 2px #49382e;
+  background-color: #f1e369;
+}
+main.login div.login div form input#recoverMail {
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */
