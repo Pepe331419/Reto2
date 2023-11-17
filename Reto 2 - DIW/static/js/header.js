@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const fldstPrecio = document.querySelector("#fldstPrecio");
     const divPrecio = fldstPrecio.querySelectorAll(".divPrecio");
 
+    
+
     if (btnBusqueda) btnBusqueda.addEventListener("click", ()=>{
         menuBusqueda.classList.toggle("reveal");
     })

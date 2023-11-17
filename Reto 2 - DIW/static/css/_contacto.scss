@@ -1,0 +1,85 @@
+@use "vars";
+
+main.contacto {
+    section.boxed p{
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin: 0.5rem 0;
+        }
+
+        textarea {
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            outline: solid 1px vars.$color_letra_menu;
+            border: 0;
+            resize: vertical;
+
+            &:focus {
+                outline: solid 2px vars.$color_letra_menu;
+            }
+        }
+
+        input {
+            width: 40rem;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            outline: solid 1px vars.$color_letra_menu;
+            border: 0;
+
+            &:focus {
+                outline: solid 2px vars.$color_letra_menu;
+            }
+
+            &[type=submit] {
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+                width: 10rem;
+                background-color: #ffffff;
+                border: solid 1px vars.$color_letra_menu;
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+
+                &:hover {
+                    outline: solid 2px vars.$color_letra_menu;
+                    background-color: vars.$color_elemento_menu;
+                }
+            }
+        }
+    }
+
+    address{
+        font-style: normal;
+
+        ul{
+            list-style: none;
+            margin: 0;
+
+            li {
+                margin: 0.5rem 0;
+            }
+        }
+
+        a{
+            text-decoration: none;
+            margin: auto;
+            color: #000000;
+        }
+        
+        iframe{
+            margin: 0;
+            padding: 0;
+            border-radius: 1rem;
+            border: 0.2rem solid vars.$color_letra_menu;
+        }
+    }
+}

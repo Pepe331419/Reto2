@@ -2,6 +2,7 @@
 @use "header";
 @use "footer";
 @use "micuenta";
+@use "contacto";
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -42,7 +43,8 @@ section.boxed {
 
     iframe {
         margin-top: 1rem;
-        border: 0;
+        border-radius: 1rem;
+        border: 0.2rem solid vars.$color_letra_menu;
     }
 
     div.col2 {
@@ -264,12 +266,12 @@ main.login {
             margin: 0;
             padding: 0;
 
-            div.hidden{
+            div.hidden {
                 display: none;
             }
         }
 
-        div#recoverPassword{
+        div#recoverPassword {
             margin: 0;
         }
 
@@ -338,7 +340,7 @@ main.login {
                 }
             }
 
-            input#recoverMail{
+            input#recoverMail {
                 margin-bottom: 1rem;
             }
         }

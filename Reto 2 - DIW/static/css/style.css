@@ -297,6 +297,75 @@ main.miCuenta form#modifyInfo input[type=submit]:hover {
   background-color: #fffbb4;
 }
 
+main.contacto section.boxed p {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+main.contacto form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main.contacto form div {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+main.contacto form textarea {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  outline: solid 1px #49382e;
+  border: 0;
+  resize: vertical;
+}
+main.contacto form textarea:focus {
+  outline: solid 2px #49382e;
+}
+main.contacto form input {
+  width: 40rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  outline: solid 1px #49382e;
+  border: 0;
+}
+main.contacto form input:focus {
+  outline: solid 2px #49382e;
+}
+main.contacto form input[type=submit] {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 10rem;
+  background-color: #ffffff;
+  border: solid 1px #49382e;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+main.contacto form input[type=submit]:hover {
+  outline: solid 2px #49382e;
+  background-color: #fffbb4;
+}
+main.contacto address {
+  font-style: normal;
+}
+main.contacto address ul {
+  list-style: none;
+  margin: 0;
+}
+main.contacto address ul li {
+  margin: 0.5rem 0;
+}
+main.contacto address a {
+  text-decoration: none;
+  margin: auto;
+  color: #000000;
+}
+main.contacto address iframe {
+  margin: 0;
+  padding: 0;
+  border-radius: 1rem;
+  border: 0.2rem solid #49382e;
+}
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -333,7 +402,8 @@ section.boxed p {
 }
 section.boxed iframe {
   margin-top: 1rem;
-  border: 0;
+  border-radius: 1rem;
+  border: 0.2rem solid #49382e;
 }
 section.boxed div.col2 {
   display: flex;
