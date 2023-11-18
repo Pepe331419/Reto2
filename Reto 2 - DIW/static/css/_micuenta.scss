@@ -58,6 +58,10 @@ main.miCuenta {
                 color: vars.$color_letra_menu;
                 margin-left: 1rem;
             }
+
+            tbody tr:hover{
+                outline: solid 0.25rem vars.$color_letra_menu;
+            }
         }
     }
 

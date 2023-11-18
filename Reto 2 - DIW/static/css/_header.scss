@@ -1,6 +1,6 @@
 @use "vars";
 
-header {
+header div.desktop {
     background-color: vars.$color_fondo_menu;
     display: flex;
     justify-content: space-between;
@@ -31,7 +31,7 @@ header {
                 padding: vars.$paddingheader;
                 color: vars.$color_letra_menu;
                 background-color: vars.$color_elemento_menu;
-                width: 9rem;
+                min-width: 9rem;
                 border-radius: 1.5rem;
                 text-align: center;
                 margin: 0.5rem;
@@ -88,6 +88,87 @@ header {
     }
 }
 
+@media only screen and (max-width: 1239px) {
+    li{
+        min-width: 5rem !important;
+
+        ul.submenu{
+            min-width: 7rem !important;
+        }
+
+        *{
+            font-size: 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    header div.mobile {
+        display: flex !important;
+    }
+
+    header div.desktop {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 890px) {
+    header div.mobile {
+        display: none !important;
+    }
+
+    header div.desktop {
+        display: flex !important;
+    }
+}
+
+header div.mobile {
+    background-color: vars.$color_fondo_menu;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    outline: solid 2px vars.$color_letra_menu;
+    position: sticky;
+    top: 0;
+    z-index: 8;
+    padding: 0 0.5rem;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+
+        &.mobileNav {
+            background-color: vars.$color_elemento_menu;
+            border-radius: 2rem;
+            padding: 0.5rem;
+        }
+
+        &:not(.mobileNav){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 7rem;
+            height: 7rem;
+            padding-left: 0.5rem;
+            
+            img{
+                height: 7rem;
+                width: 7rem;       
+            }
+        }
+
+        img.elementMenu {
+            height: 4rem;
+            width: 4rem;
+        }
+    }
+}
+
+
 nav#menuBusqueda {
     display: flex;
     flex-direction: column;
@@ -105,17 +186,17 @@ nav#menuBusqueda {
     margin-left: -20rem;
     z-index: 9;
 
-    h3{
+    h3 {
         color: vars.$color_letra_menu;
     }
 
-    input[type=text]{
+    input[type=text] {
         border-radius: 0.5rem;
         padding: 0.5rem;
         outline: solid 1px vars.$color_letra_menu;
         border: 0;
 
-        &:focus{
+        &:focus {
             outline: solid 2px vars.$color_letra_menu;
         }
     }
@@ -126,7 +207,7 @@ nav#menuBusqueda {
         margin: 0.75rem 0;
         min-height: 1rem;
         border-radius: 0.5rem;
-        
+
         legend {
             background-color: #ffffff;
             border-radius: 1rem;
@@ -139,7 +220,7 @@ nav#menuBusqueda {
             align-items: center;
             justify-content: flex-start;
 
-            &.hidden{
+            &.hidden {
                 display: none;
             }
         }
@@ -149,7 +230,7 @@ nav#menuBusqueda {
             flex-direction: column;
             align-items: flex-start;
 
-            &.hidden{
+            &.hidden {
                 display: none;
             }
 
@@ -164,7 +245,7 @@ nav#menuBusqueda {
             justify-content: flex-start;
             align-items: center;
 
-            &.hidden{
+            &.hidden {
                 display: none;
             }
         }
@@ -176,13 +257,13 @@ nav#menuBusqueda {
         padding: 0.5rem 1rem;
         border-radius: 1rem;
 
-        &:hover{
+        &:hover {
             outline: solid 2px vars.$color_letra_menu;
             background-color: vars.$color_elemento_menu;
         }
     }
 
-    &.reveal{
+    &.reveal {
         margin-left: 0;
     }
 }

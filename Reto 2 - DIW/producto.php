@@ -96,11 +96,13 @@ require("views/head.php");
         </section>
     </main>
 
+    <?php
+    require("views/carrito.php");
+    ?>
 
     <?php
     require("views/footer.php");
     ?>
-
 </body>
 
 </html>

@@ -45,6 +45,10 @@ require("views/head.php");
     </main>
 
     <?php
+    require("views/carrito.php");
+    ?>
+
+    <?php
     require("views/footer.php");
     ?>
 </body>

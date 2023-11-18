@@ -29,7 +29,6 @@ section.boxed {
     h1 {
         font-size: 2rem;
         padding-bottom: 1rem;
-        color: vars.$color_letra_menu;
     }
 
     * {
@@ -252,6 +251,7 @@ dialog {
 
 main.login {
     text-align: center;
+    overflow: hidden;
 
     div.login {
         display: flex;
@@ -346,6 +346,19 @@ main.login {
         }
 
     }
+}
 
-
+div#shoppingCart{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    background-color: vars.$color_fondo_menu;
+    border-radius: 1rem 0 0 0;
+    z-index: 11;
+    
+    img {
+        width: 4rem;
+        height: 4rem;
+    }
 }

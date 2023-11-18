@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const btnBusqueda = document.querySelector("#btnBusqueda");
+    const imgBusqueda = document.querySelector("#imgBusqueda");
     const menuBusqueda = document.querySelector("#menuBusqueda");
 
     const lgndMuebles = document.querySelector("#lgndMuebles");
@@ -23,6 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
     if (btnBusqueda) btnBusqueda.addEventListener("click", ()=>{
+        menuBusqueda.classList.toggle("reveal");
+    })
+
+    if (imgBusqueda) imgBusqueda.addEventListener("click", ()=>{
         menuBusqueda.classList.toggle("reveal");
     })
     
