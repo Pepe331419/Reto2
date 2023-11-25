@@ -431,6 +431,23 @@ main.contacto address iframe {
   border: 0.2rem solid #49382e;
 }
 
+div.conjuntoProductos {
+  display: flex;
+}
+div.conjuntoProductos div.producto {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border: solid 0.2rem #49382e;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+div.conjuntoProductos div.producto div.precio {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -461,8 +478,9 @@ section.boxed * {
   margin-left: 2rem;
   margin-right: 2rem;
 }
-section.boxed p {
+section.boxed p.legal {
   margin-bottom: 3rem;
+  text-align: justify;
 }
 section.boxed iframe {
   margin-top: 1rem;
@@ -726,11 +744,11 @@ main.login div.login div form input#recoverMail {
 
 div#shoppingCart {
   position: fixed;
-  right: 0;
-  bottom: 0;
+  right: 1rem;
+  bottom: 1rem;
   padding: 1rem;
   background-color: #f1e369;
-  border-radius: 1rem 0 0 0;
+  border-radius: 50%;
   z-index: 11;
 }
 div#shoppingCart img {

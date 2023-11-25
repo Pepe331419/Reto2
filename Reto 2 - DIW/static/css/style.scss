@@ -3,6 +3,7 @@
 @use "footer";
 @use "micuenta";
 @use "contacto";
+@use "categoriaProductos";
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -36,8 +37,9 @@ section.boxed {
         margin-right: 2rem;
     }
 
-    p {
+    p.legal {
         margin-bottom: 3rem;
+        text-align: justify;
     }
 
     iframe {
@@ -348,15 +350,15 @@ main.login {
     }
 }
 
-div#shoppingCart{
+div#shoppingCart {
     position: fixed;
-    right: 0;
-    bottom: 0;
+    right: 1rem;
+    bottom: 1rem;
     padding: 1rem;
     background-color: vars.$color_fondo_menu;
-    border-radius: 1rem 0 0 0;
+    border-radius: 50%;
     z-index: 11;
-    
+
     img {
         width: 4rem;
         height: 4rem;

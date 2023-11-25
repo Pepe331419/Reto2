@@ -1,0 +1,20 @@
+@use "vars";
+
+div.conjuntoProductos{
+    display: flex;
+
+    div.producto{
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        border: solid 0.2rem vars.$color_letra_menu;
+        border-radius: 2rem;
+        padding: 1rem;
+
+        div.precio{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+}
