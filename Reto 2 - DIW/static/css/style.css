@@ -440,12 +440,142 @@ div.conjuntoProductos div.producto {
   background-color: #FFFFFF;
   border: solid 0.2rem #49382e;
   border-radius: 2rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
+  min-width: 240px;
+}
+div.conjuntoProductos div.producto h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+div.conjuntoProductos div.producto p {
+  color: #333333;
+  text-align: center;
+  margin: 0.5rem;
 }
 div.conjuntoProductos div.producto div.precio {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.conjuntoProductos div.producto div.precio * {
+  margin: 1rem 0.5rem;
+}
+div.conjuntoProductos div.producto div.precio h4 {
+  font-size: 1.25rem;
+}
+div.conjuntoProductos div.producto div.precio h4 span {
+  text-decoration: line-through;
+  color: #333333;
+}
+div.conjuntoProductos div.producto button {
+  background-color: #fffbb4;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+div.conjuntoProductos div.producto button:hover {
+  background-color: #f1e369;
+  outline: solid 2px #49382e;
+}
+
+section#hero {
+  min-height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  outline: solid 0.15rem #49382e;
+  background: linear-gradient(60deg, #d8f4ff, #d8ffef, #d8ffe0, #d8ffef);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+section#hero img {
+  margin: 0;
+  width: 25rem;
+}
+section#hero button {
+  background-color: #ffffff;
+  border: solid 1px #49382e;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+section#hero button:hover {
+  outline: solid 2px #49382e;
+  background-color: #f1e369;
+}
+section#hero h1 {
+  font-size: 2rem;
+}
+
+section.mainBox {
+  max-width: 80vw;
+  background-color: #fffff5;
+  margin: auto;
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+}
+section.mainBox * {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+section.mainBox h1 {
+  margin-bottom: 2rem;
+}
+section.mainBox img.icoCat {
+  max-width: 32px;
+  max-height: 32px;
+  margin: 0.2rem;
+}
+section.mainBox ul.cat1 {
+  margin-right: 2rem;
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+section.mainBox ul.cat1 li {
+  margin: 0;
+}
+section.mainBox ul.cat1 li ul.cat2 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+section.mainBox ul.cat1 li ul.cat2 > li {
+  margin: 0.4rem 0;
+}
+section.mainBox ul.cat1 a {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: black;
+  background-color: #fffbb4;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+section.mainBox ul.cat1 a:hover {
+  background-color: #f1e369;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
 }
 
 * {
