@@ -186,6 +186,9 @@ nav#menuBusqueda fieldset {
   min-height: 1rem;
   border-radius: 0.5rem;
 }
+nav#menuBusqueda fieldset * {
+  margin: 0.15rem 0 0.15rem 0.2rem;
+}
 nav#menuBusqueda fieldset legend {
   background-color: #ffffff;
   border-radius: 1rem;
@@ -386,7 +389,7 @@ main.contacto section.boxed p {
 main.contacto form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 main.contacto form div {
   display: flex;
@@ -716,6 +719,7 @@ section.bigBox ul.cat1 a {
   background-color: #fffbb4;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
+  min-height: 2.5rem;
 }
 section.bigBox ul.cat1 a:hover {
   background-color: #f1e369;
@@ -730,7 +734,7 @@ div.conjuntoReviews {
 }
 div.conjuntoReviews div.review {
   width: 20rem;
-  height: 13rem;
+  height: 11rem;
   background-color: #FFFFFF;
   border: solid 0.2rem #49382e;
   border-radius: 2rem;
@@ -893,7 +897,7 @@ table.adminTable button:hover {
 }
 
 dialog#editDialog {
-  max-width: 80vw;
+  max-width: 75vw;
 }
 dialog#editDialog form {
   display: flex;
@@ -903,7 +907,7 @@ dialog#editDialog form {
   align-items: flex-start;
 }
 dialog#editDialog form input#editName, dialog#editDialog form input#editMail, dialog#editDialog form input#editPassword {
-  min-width: 15rem;
+  min-width: 20rem;
 }
 dialog#editDialog form textarea {
   resize: vertical;
@@ -918,7 +922,7 @@ dialog#editDialog form div {
   gap: 1rem;
 }
 dialog#editDialog form div fieldset {
-  width: 75rem;
+  width: 85rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
@@ -955,6 +959,11 @@ dialog#editDialog form div.imgSelector button.deleteImg {
   border: solid 1px #000000;
   color: #FFFFFF;
   background-color: #ec2727;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 dialog#editDialog form div.imgSelector button.deleteImg:hover {
   background-color: #aa0c0c;
@@ -967,6 +976,9 @@ dialog#editDialog form div.imgSelector button.newImgEdit {
   height: 100%;
   border-style: dashed;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 dialog#editDialog form div.imgSelector button:hover {
   background-color: #c5c5c5;
@@ -1286,6 +1298,9 @@ div#shoppingCart div#numItems {
   position: fixed;
   padding: 0.5rem;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   right: 1rem;
   bottom: 1rem;
   color: #FFFFFF;

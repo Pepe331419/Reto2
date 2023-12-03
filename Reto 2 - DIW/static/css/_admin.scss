@@ -144,7 +144,7 @@ table.adminTable {
 }
 
 dialog#editDialog {
-    max-width: 80vw;
+    max-width: 75vw;
 
     form {
         display: flex;
@@ -154,7 +154,7 @@ dialog#editDialog {
         align-items: flex-start;
 
         input#editName, input#editMail, input#editPassword{
-            min-width: 15rem;
+            min-width: 20rem;
         }
 
         textarea{
@@ -172,7 +172,7 @@ dialog#editDialog {
             gap: 1rem;
 
             fieldset {
-                width: 75rem;
+                width: 85rem;
                 display: flex;
                 align-items: flex-start;
                 justify-content: space-around;
@@ -213,6 +213,11 @@ dialog#editDialog {
                 border: solid 1px #000000;
                 color: #FFFFFF;
                 background-color: #ec2727;
+                width: 25px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 &:hover {
                     background-color: #aa0c0c;
@@ -227,6 +232,9 @@ dialog#editDialog {
                 height: 100%;
                 border-style: dashed;
                 border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             button:hover {

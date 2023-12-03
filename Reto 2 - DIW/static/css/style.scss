@@ -367,6 +367,9 @@ div#shoppingCart {
         position: fixed;
         padding: 0.5rem;
         border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         right: 1rem;
         bottom: 1rem;
         color: #FFFFFF;
