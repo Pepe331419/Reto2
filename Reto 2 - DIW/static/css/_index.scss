@@ -43,12 +43,12 @@ section#hero {
         }
     }
 
-    & h1{
+    & h1 {
         font-size: 2rem;
     }
 }
 
-section.mainBox{
+section.bigBox {
     max-width: 80vw;
     background-color: vars.$color_fondo_boxed;
     margin: auto;
@@ -56,12 +56,12 @@ section.mainBox{
     border-radius: 2rem;
     margin-top: 2rem;
 
-    *{
+    * {
         margin-left: 2rem;
         margin-right: 2rem;
     }
 
-    h1{
+    h1 {
         margin-bottom: 2rem;
     }
 
@@ -71,24 +71,24 @@ section.mainBox{
         margin: 0.2rem;
     }
 
-    ul.cat1{
+    ul.cat1 {
         margin-right: 2rem;
         display: flex;
         list-style: none;
         gap: 1.5rem;
         align-items: flex-start;
         justify-content: space-around;
-        
-        li{
+
+        li {
             margin: 0;
 
-            ul.cat2{
+            ul.cat2 {
                 list-style: none;
                 display: flex;
                 flex-direction: column;
                 margin: 0;
 
-                &>li{
+                &>li {
                     margin: 0.4rem 0;
                 }
             }
@@ -105,7 +105,7 @@ section.mainBox{
             padding: 0.5rem 1rem;
             border-radius: 1rem;
 
-            &:hover{
+            &:hover {
                 background-color: vars.$color_fondo_menu;
                 box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
             }
@@ -113,3 +113,74 @@ section.mainBox{
     }
 }
 
+div.conjuntoReviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+
+    div.review {
+        width: 20rem;
+        height: 13rem;
+        background-color: #FFFFFF;
+        border: solid 0.2rem vars.$color_letra_menu;
+        border-radius: 2rem;
+        margin: 0.5rem;
+        transition: 0.2s;
+
+        *{
+            margin: 0.5rem 1rem;
+        }
+
+        a {
+            margin: 0;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        img {
+            margin: 0;
+            height: 16px;
+        }
+
+        &:hover{
+            padding: 0.5rem;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    }
+}
+
+div.infoMisc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #FFFFFF;
+        border: solid 0.2rem vars.$color_letra_menu;
+        border-radius: 2rem;
+        flex: 1;
+        padding: 0.5rem 2rem;
+        height: 5rem;
+        transition: 0.2s;
+
+        &:hover{
+            padding: 0.75rem 3rem;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        a{
+            margin: 0;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        img{
+            height: 64px;
+            margin: 0;
+        }
+    }
+}

@@ -1,42 +1,42 @@
 <header>
     <div class="desktop">
-        <img src="static/img/Logo.svg" alt="Logotipo de la web">
+        <a id="goToIndex" href="index.php"><img src="static/img/Logo.svg" alt="Logotipo de la web"></a>
         <nav>
             <ul>
                 <li>
-                    <a href="producto.php">Muebles</a>
+                    <a href="#">Muebles</a>
                     <ul class="subMenu">
-                        <li><a href="producto.php">Art. del hogar</a></li>
-                        <li><a href="producto.php">Enseres</a></li>
-                        <li><a href="producto.php">Para colgar</a></li>
-                        <li><a href="producto.php">De techo</a></li>
+                        <li><a href="categoria_productos.php">Art. del hogar</a></li>
+                        <li><a href="categoria_productos.php">Enseres</a></li>
+                        <li><a href="categoria_productos.php">Para colgar</a></li>
+                        <li><a href="categoria_productos.php">De techo</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Moda</a>
                     <ul class="subMenu">
-                        <li><a href="producto.php">Partes de arriba</a></li>
-                        <li><a href="producto.php">Partes de abajo</a></li>
-                        <li><a href="producto.php">Cuerpo entero</a></li>
-                        <li><a href="producto.php">Sombrerería</a></li>
-                        <li><a href="producto.php">Accesorios</a></li>
-                        <li><a href="producto.php">Complementos</a></li>
-                        <li><a href="producto.php">Calcetines</a></li>
-                        <li><a href="producto.php">Calzados</a></li>
-                        <li><a href="producto.php">Paraguas</a></li>
-                        <li><a href="producto.php">Otros</a></li>
+                        <li><a href="categoria_productos.php">Partes de arriba</a></li>
+                        <li><a href="categoria_productos.php">Partes de abajo</a></li>
+                        <li><a href="categoria_productos.php">Cuerpo entero</a></li>
+                        <li><a href="categoria_productos.php">Sombrerería</a></li>
+                        <li><a href="categoria_productos.php">Accesorios</a></li>
+                        <li><a href="categoria_productos.php">Complementos</a></li>
+                        <li><a href="categoria_productos.php">Calcetines</a></li>
+                        <li><a href="categoria_productos.php">Calzados</a></li>
+                        <li><a href="categoria_productos.php">Paraguas</a></li>
+                        <li><a href="categoria_productos.php">Otros</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Interior</a>
                     <ul class="subMenu">
-                        <li><a href="producto.php">Papel de pared</a></li>
-                        <li><a href="producto.php">Suelos</a></li>
-                        <li><a href="producto.php">Alfombras</a></li>
+                        <li><a href="categoria_productos.php">Papel de pared</a></li>
+                        <li><a href="categoria_productos.php">Suelos</a></li>
+                        <li><a href="categoria_productos.php">Alfombras</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Otros</a>
+                    <a href="categoria_productos.php">Otros</a>
                 </li>
             </ul>
         </nav>

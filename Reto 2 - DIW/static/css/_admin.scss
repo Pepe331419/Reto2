@@ -1,0 +1,243 @@
+@use "vars";
+
+
+main.adminMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+table.adminTable {
+    border-collapse: collapse;
+    max-width: 95vw;
+
+    ul {
+        margin: 0;
+        padding: 0.5rem;
+
+        li {
+            list-style: none;
+
+        }
+    }
+
+    colgroup {
+        col.id {
+            width: 5rem;
+        }
+
+        col.nombre {
+            width: 14rem;
+        }
+
+        col.descripcion {
+            width: 24rem;
+            font-size: 0.75rem;
+        }
+
+        col.variantes {
+            width: 14rem;
+        }
+
+        col.galeria {
+            width: 12rem;
+        }
+
+        col.precio {
+            width: 6rem;
+        }
+
+        col.stock {
+            width: 5rem;
+        }
+
+        col.fecha {
+            width: 11rem;
+        }
+
+        col.acciones {
+            width: 12rem;
+        }
+
+        col.productos{
+            width: 24rem;
+        }
+
+        col.estadoPago{
+            width: 10rem;
+        }
+
+        col.estadoEnvio{
+            width: 10rem;
+        }
+
+        col.usuario{
+            width: 20rem;
+        }
+    }
+
+    td,
+    th {
+        border: solid 1px #000000;
+        padding: 0.5rem 0.5rem;
+        min-height: 50rem;
+
+        &.center {
+            text-align: center;
+        }
+    }
+
+    div.centerContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    tbody {
+        tr:has(td):nth-child(2n+1) {
+            background-color: #FFFFFF;
+        }
+
+        tr:has(td):nth-child(2n) {
+            background-color: #e6e6e6;
+        }
+
+        tr:has(th){
+            background-color: #bbbbbb;
+        }
+
+        
+    }
+
+
+    thead {
+        background-color: #aaaaaa;
+    }
+
+    img {
+        height: 32px;
+        width: 32px;
+    }
+
+    button {
+        width: 6rem;
+
+        &.editar {
+            background-color: #aaaaaa;
+            color: #000000;
+        }
+
+        &.eliminar {
+            background-color: #ec2727;
+            color: #FFFFFF;
+        }
+
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 6px;
+        }
+    }
+}
+
+dialog#editDialog {
+    max-width: 80vw;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        input#editName, input#editMail, input#editPassword{
+            min-width: 15rem;
+        }
+
+        textarea{
+            resize: vertical;
+        }
+
+        label {
+            width: 6rem;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            fieldset {
+                width: 75rem;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+                input {
+                    margin-right: 1rem;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        div.imgSelector {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            padding: 0.5rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            button.imgEditContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+
+            button.deleteImg {
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-radius: 50%;
+                border: solid 1px #000000;
+                color: #FFFFFF;
+                background-color: #ec2727;
+
+                &:hover {
+                    background-color: #aa0c0c;
+                    border-radius: 50%;
+                    border: solid 1px #000000;
+                    color: #FFFFFF;
+                }
+            }
+
+            button.newImgEdit {
+                width: 100%;
+                height: 100%;
+                border-style: dashed;
+                border-radius: 5px;
+            }
+
+            button:hover {
+                background-color: #c5c5c5;
+                border-radius: 5px;
+            }
+        }
+
+        input[type=submit],
+        input[type=button] {
+            margin-top: 0.5rem;
+        }
+    }
+}

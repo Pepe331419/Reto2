@@ -13,9 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const chooseDialog = document.querySelector("#chooseDialog");
     const btnAddItem = document.querySelector("#btnAddItem");
     const btnGoToList = document.querySelector("#btnGoToList");
+    const numItems = document.querySelector("#numItems");
+    const buttonsAddToCart = document.querySelectorAll(".addToCart");
 
 
-    btnVar1.addEventListener("click", () => {
+    if (btnVar1) btnVar1.addEventListener("click", () => {
         if (mainImg.getAttribute("src") != "static/img/Comoda de madera - Madera clara.png") {
             mainImg.setAttribute("src", "static/img/Comoda de madera - Madera clara.png");
             mainImg.setAttribute("alt", "Cómoda de madera - Madera clara");
@@ -24,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    btnVar2.addEventListener("click", () => {
+    if (btnVar2) btnVar2.addEventListener("click", () => {
         if (mainImg.getAttribute("src") != "static/img/Comoda de madera - Madera blanca.png") {
             mainImg.setAttribute("src", "static/img/Comoda de madera - Madera blanca.png");
             mainImg.setAttribute("alt", "Cómoda de madera - Madera blanca");
@@ -33,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    btnVar3.addEventListener("click", () => {
+    if(btnVar3) btnVar3.addEventListener("click", () => {
         if (mainImg.getAttribute("src") != "static/img/Comoda de madera - Madera cerezo.png") {
             mainImg.setAttribute("src", "static/img/Comoda de madera - Madera cerezo.png");
             mainImg.setAttribute("alt", "Cómoda de madera - Madera cerezo");
@@ -42,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    btnVar4.addEventListener("click", () => {
+    if(btnVar4) btnVar4.addEventListener("click", () => {
         if (mainImg.getAttribute("src") != "static/img/Comoda de madera - Madera oscura.png") {
             mainImg.setAttribute("src", "static/img/Comoda de madera - Madera oscura.png");
             mainImg.setAttribute("alt", "Cómoda de madera - Madera oscura");
@@ -51,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    btnVar5.addEventListener("click", () => {
+    if(btnVar5) btnVar5.addEventListener("click", () => {
         if (mainImg.getAttribute("src") != "static/img/Comoda de madera - Madera negra.png") {
             mainImg.setAttribute("src", "static/img/Comoda de madera - Madera negra.png");
             mainImg.setAttribute("alt", "Cómoda de madera - Madera negra");
@@ -60,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    btnVar6.addEventListener("click", () => {
+    if(btnVar6) btnVar6.addEventListener("click", () => {
         if (mainImg.getAttribute("src") != "static/img/Comoda de madera - Madera verde.png") {
             mainImg.setAttribute("src", "static/img/Comoda de madera - Madera verde.png");
             mainImg.setAttribute("alt", "Cómoda de madera - Madera verde");
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    btnVar7.addEventListener("click", () => {
+    if(btnVar7) btnVar7.addEventListener("click", () => {
         if (mainImg.getAttribute("src") != "static/img/Comoda de madera - Madera azul.png") {
             mainImg.setAttribute("src", "static/img/Comoda de madera - Madera azul.png");
             mainImg.setAttribute("alt", "Cómoda de madera - Madera azul");
@@ -78,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    btnVar8.addEventListener("click", () => {
+    if(btnVar8) btnVar8.addEventListener("click", () => {
         if (mainImg.getAttribute("src") != "static/img/Comoda de madera - Madera rosa.png") {
             mainImg.setAttribute("src", "static/img/Comoda de madera - Madera rosa.png");
             mainImg.setAttribute("alt", "Cómoda de madera - Madera rosa");
@@ -87,12 +89,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    btnAddItem.addEventListener("click", () => {
+    if(btnAddItem) btnAddItem.addEventListener("click", () => {
+        let currentNum = parseInt(numItems.textContent);
+        currentNum+=1;
+        numItems.textContent=currentNum;
         chooseDialog.showModal();
     })
 
-    btnGoToList.addEventListener("click", () =>{
-        window.location.href="carrito.php";
+    if(btnGoToList) btnGoToList.addEventListener("click", () =>{
+        window.location.href="index.php";
     })
+
+    if(buttonsAddToCart) buttonsAddToCart.forEach(button => {
+        button.addEventListener("click", () => {
+            let currentNum = parseInt(numItems.textContent);
+            currentNum+=1;
+            numItems.textContent=currentNum;
+        })
+    });
 });
 

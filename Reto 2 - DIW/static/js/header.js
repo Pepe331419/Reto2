@@ -1,4 +1,3 @@
-//TODO: Agrupar elementos del header con resoluciones límites
 document.addEventListener("DOMContentLoaded", function () {
 
     const btnBusqueda = document.querySelector("#btnBusqueda");
@@ -32,28 +31,28 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     
 
-    lgndMuebles.addEventListener("click", () => {
+    if(lgndMuebles) lgndMuebles.addEventListener("click", () => {
         lgndMuebles.textContent == "Muebles ▶" ? lgndMuebles.textContent = "Muebles ▼" : lgndMuebles.textContent = "Muebles ▶";
         divMuebles.forEach((div) =>{
             div.classList.toggle("hidden");
         })
     })
 
-    lgndModa.addEventListener("click", () => {
+    if(lgndModa) lgndModa.addEventListener("click", () => {
         lgndModa.textContent == "Moda ▶" ? lgndModa.textContent = "Moda ▼" : lgndModa.textContent = "Moda ▶";
         divModa.forEach((div) =>{
             div.classList.toggle("hidden");
         })
     })
 
-    lgndInterior.addEventListener("click", () => {
+    if(lgndInterior) lgndInterior.addEventListener("click", () => {
         lgndInterior.textContent == "Interior ▶" ? lgndInterior.textContent = "Interior ▼" : lgndInterior.textContent = "Interior ▶";
         divInterior.forEach((div) =>{
             div.classList.toggle("hidden");
         })
     })
 
-    lgndPrecio.addEventListener("click", () => {
+    if(lgndPrecio) lgndPrecio.addEventListener("click", () => {
         lgndPrecio.textContent == "Precio ▶" ? lgndPrecio.textContent = "Precio ▼" : lgndPrecio.textContent = "Precio ▶";
         divPrecio.forEach((div) =>{
             div.classList.toggle("hidden");

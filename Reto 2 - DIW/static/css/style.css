@@ -9,10 +9,16 @@ header div.desktop {
   top: 0;
   z-index: 8;
 }
-header div.desktop img {
-  width: -moz-fit-content;
-  width: fit-content;
+header div.desktop a#goToIndex {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 1rem;
+}
+header div.desktop a#goToIndex img {
+  width: 10rem;
+  height: 10rem;
 }
 header div.desktop nav {
   display: flex;
@@ -361,6 +367,17 @@ main.miCuenta form#modifyInfo input[type=submit]:hover {
   outline: solid 2px #49382e;
   background-color: #fffbb4;
 }
+main.miCuenta a:has(button) button {
+  margin-top: 1.5rem;
+  background-color: #ffffff;
+  border: solid 1px #49382e;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+main.miCuenta a:has(button) button:hover {
+  outline: solid 2px #49382e;
+  background-color: #fffbb4;
+}
 
 main.contacto section.boxed p {
   margin-bottom: 1.5rem;
@@ -431,17 +448,109 @@ main.contacto address iframe {
   border: 0.2rem solid #49382e;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+form#formCatProd input[type=search] {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  outline: solid 1px #49382e;
+  border: 0;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  width: 30rem;
+}
+form#formCatProd input[type=search]:focus {
+  outline: solid 2px #49382e;
+}
+form#formCatProd input[type=submit] {
+  background-color: #ffffff;
+  border: solid 1px #49382e;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin: 0;
+}
+form#formCatProd input[type=submit]:hover {
+  outline: solid 2px #49382e;
+  background-color: #fffbb4;
+}
+
 div.conjuntoProductos {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 1rem;
 }
 div.conjuntoProductos div.producto {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #FFFFFF;
   border: solid 0.2rem #49382e;
   border-radius: 2rem;
   padding: 0.5rem 1rem;
-  min-width: 240px;
+  width: 280px;
+  margin: 0.5rem;
+}
+div.conjuntoProductos div.producto a {
+  text-decoration: none;
+  color: #000000;
+  margin: 0;
+}
+div.conjuntoProductos div.producto.compact {
+  width: 200px;
+}
+div.conjuntoProductos div.producto figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.1rem #49382e;
+  border-radius: 2rem;
+  width: 200px;
+}
+div.conjuntoProductos div.producto figure img {
+  height: 10rem;
+  max-width: 10rem;
+  margin: 0.2rem;
+}
+div.conjuntoProductos div.producto figure div.ribbon {
+  position: absolute;
+  transform: rotate(45deg);
+  padding: 0.1rem 10rem;
+  top: 1rem;
+  right: -12.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.conjuntoProductos div.producto figure div.ribbon.oferta {
+  background-color: #FF0000;
+}
+div.conjuntoProductos div.producto figure div.ribbon.oferta p {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1rem;
+}
+div.conjuntoProductos div.producto figure div.ribbon.tendencia {
+  background-color: #137DC5;
+}
+div.conjuntoProductos div.producto figure div.ribbon.tendencia p {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 0.75rem;
+}
+div.conjuntoProductos div.producto figure div.ribbon.nuevo {
+  background-color: rgb(119, 48, 185);
+}
+div.conjuntoProductos div.producto figure div.ribbon.nuevo p {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1rem;
 }
 div.conjuntoProductos div.producto h3 {
   font-size: 1.5rem;
@@ -459,7 +568,7 @@ div.conjuntoProductos div.producto div.precio {
   align-items: center;
 }
 div.conjuntoProductos div.producto div.precio * {
-  margin: 1rem 0.5rem;
+  margin: 1rem 0.2rem;
 }
 div.conjuntoProductos div.producto div.precio h4 {
   font-size: 1.25rem;
@@ -467,6 +576,14 @@ div.conjuntoProductos div.producto div.precio h4 {
 div.conjuntoProductos div.producto div.precio h4 span {
   text-decoration: line-through;
   color: #333333;
+}
+div.conjuntoProductos div.producto select {
+  width: 10rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+div.conjuntoProductos div.producto select option {
+  border-radius: 0.5rem;
 }
 div.conjuntoProductos div.producto button {
   background-color: #fffbb4;
@@ -478,6 +595,33 @@ div.conjuntoProductos div.producto button {
 }
 div.conjuntoProductos div.producto button:hover {
   background-color: #f1e369;
+  outline: solid 2px #49382e;
+}
+
+div.paginacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.paginacion a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  background-color: #f1e369;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #49382e;
+  transition: 0.1s;
+}
+div.paginacion a.currentPage {
+  outline: solid 2px #49382e;
+}
+div.paginacion a:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 6px;
   outline: solid 2px #49382e;
 }
 
@@ -522,7 +666,7 @@ section#hero h1 {
   font-size: 2rem;
 }
 
-section.mainBox {
+section.bigBox {
   max-width: 80vw;
   background-color: #fffff5;
   margin: auto;
@@ -530,19 +674,19 @@ section.mainBox {
   border-radius: 2rem;
   margin-top: 2rem;
 }
-section.mainBox * {
+section.bigBox * {
   margin-left: 2rem;
   margin-right: 2rem;
 }
-section.mainBox h1 {
+section.bigBox h1 {
   margin-bottom: 2rem;
 }
-section.mainBox img.icoCat {
+section.bigBox img.icoCat {
   max-width: 32px;
   max-height: 32px;
   margin: 0.2rem;
 }
-section.mainBox ul.cat1 {
+section.bigBox ul.cat1 {
   margin-right: 2rem;
   display: flex;
   list-style: none;
@@ -550,19 +694,19 @@ section.mainBox ul.cat1 {
   align-items: flex-start;
   justify-content: space-around;
 }
-section.mainBox ul.cat1 li {
+section.bigBox ul.cat1 li {
   margin: 0;
 }
-section.mainBox ul.cat1 li ul.cat2 {
+section.bigBox ul.cat1 li ul.cat2 {
   list-style: none;
   display: flex;
   flex-direction: column;
   margin: 0;
 }
-section.mainBox ul.cat1 li ul.cat2 > li {
+section.bigBox ul.cat1 li ul.cat2 > li {
   margin: 0.4rem 0;
 }
-section.mainBox ul.cat1 a {
+section.bigBox ul.cat1 a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -573,9 +717,264 @@ section.mainBox ul.cat1 a {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
 }
-section.mainBox ul.cat1 a:hover {
+section.bigBox ul.cat1 a:hover {
   background-color: #f1e369;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
+}
+
+div.conjuntoReviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+div.conjuntoReviews div.review {
+  width: 20rem;
+  height: 13rem;
+  background-color: #FFFFFF;
+  border: solid 0.2rem #49382e;
+  border-radius: 2rem;
+  margin: 0.5rem;
+  transition: 0.2s;
+}
+div.conjuntoReviews div.review * {
+  margin: 0.5rem 1rem;
+}
+div.conjuntoReviews div.review a {
+  margin: 0;
+  text-decoration: none;
+  color: #000000;
+}
+div.conjuntoReviews div.review img {
+  margin: 0;
+  height: 16px;
+}
+div.conjuntoReviews div.review:hover {
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+div.infoMisc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.infoMisc div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: solid 0.2rem #49382e;
+  border-radius: 2rem;
+  flex: 1;
+  padding: 0.5rem 2rem;
+  height: 5rem;
+  transition: 0.2s;
+}
+div.infoMisc div:hover {
+  padding: 0.75rem 3rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+div.infoMisc div a {
+  margin: 0;
+  text-decoration: none;
+  color: #000000;
+}
+div.infoMisc div img {
+  height: 64px;
+  margin: 0;
+}
+
+main.adminMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+table.adminTable {
+  border-collapse: collapse;
+  max-width: 95vw;
+}
+table.adminTable ul {
+  margin: 0;
+  padding: 0.5rem;
+}
+table.adminTable ul li {
+  list-style: none;
+}
+table.adminTable colgroup col.id {
+  width: 5rem;
+}
+table.adminTable colgroup col.nombre {
+  width: 14rem;
+}
+table.adminTable colgroup col.descripcion {
+  width: 24rem;
+  font-size: 0.75rem;
+}
+table.adminTable colgroup col.variantes {
+  width: 14rem;
+}
+table.adminTable colgroup col.galeria {
+  width: 12rem;
+}
+table.adminTable colgroup col.precio {
+  width: 6rem;
+}
+table.adminTable colgroup col.stock {
+  width: 5rem;
+}
+table.adminTable colgroup col.fecha {
+  width: 11rem;
+}
+table.adminTable colgroup col.acciones {
+  width: 12rem;
+}
+table.adminTable colgroup col.productos {
+  width: 24rem;
+}
+table.adminTable colgroup col.estadoPago {
+  width: 10rem;
+}
+table.adminTable colgroup col.estadoEnvio {
+  width: 10rem;
+}
+table.adminTable colgroup col.usuario {
+  width: 20rem;
+}
+table.adminTable td,
+table.adminTable th {
+  border: solid 1px #000000;
+  padding: 0.5rem 0.5rem;
+  min-height: 50rem;
+}
+table.adminTable td.center,
+table.adminTable th.center {
+  text-align: center;
+}
+table.adminTable div.centerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+table.adminTable tbody tr:has(td):nth-child(2n+1) {
+  background-color: #FFFFFF;
+}
+table.adminTable tbody tr:has(td):nth-child(2n) {
+  background-color: #e6e6e6;
+}
+table.adminTable tbody tr:has(th) {
+  background-color: #bbbbbb;
+}
+table.adminTable thead {
+  background-color: #aaaaaa;
+}
+table.adminTable img {
+  height: 32px;
+  width: 32px;
+}
+table.adminTable button {
+  width: 6rem;
+}
+table.adminTable button.editar {
+  background-color: #aaaaaa;
+  color: #000000;
+}
+table.adminTable button.eliminar {
+  background-color: #ec2727;
+  color: #FFFFFF;
+}
+table.adminTable button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 6px;
+}
+
+dialog#editDialog {
+  max-width: 80vw;
+}
+dialog#editDialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+dialog#editDialog form input#editName, dialog#editDialog form input#editMail, dialog#editDialog form input#editPassword {
+  min-width: 15rem;
+}
+dialog#editDialog form textarea {
+  resize: vertical;
+}
+dialog#editDialog form label {
+  width: 6rem;
+}
+dialog#editDialog form div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+dialog#editDialog form div fieldset {
+  width: 75rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+dialog#editDialog form div fieldset input {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+dialog#editDialog form div.imgSelector {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  padding: 0.5rem;
+}
+dialog#editDialog form div.imgSelector img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+dialog#editDialog form div.imgSelector button.imgEditContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+dialog#editDialog form div.imgSelector button.deleteImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  border: solid 1px #000000;
+  color: #FFFFFF;
+  background-color: #ec2727;
+}
+dialog#editDialog form div.imgSelector button.deleteImg:hover {
+  background-color: #aa0c0c;
+  border-radius: 50%;
+  border: solid 1px #000000;
+  color: #FFFFFF;
+}
+dialog#editDialog form div.imgSelector button.newImgEdit {
+  width: 100%;
+  height: 100%;
+  border-style: dashed;
+  border-radius: 5px;
+}
+dialog#editDialog form div.imgSelector button:hover {
+  background-color: #c5c5c5;
+  border-radius: 5px;
+}
+dialog#editDialog form input[type=submit],
+dialog#editDialog form input[type=button] {
+  margin-top: 0.5rem;
 }
 
 * {
@@ -767,14 +1166,14 @@ section.boxed div.description p {
   margin: 2rem 0;
 }
 
-dialog {
+dialog#chooseDialog {
   border-radius: 2rem;
   border: solid 2px #49382e;
 }
-dialog form {
+dialog#chooseDialog form {
   padding: 0.5rem;
 }
-dialog form input {
+dialog#chooseDialog form input {
   margin: 1rem 0;
   border: 0;
   padding: 0.75rem 1rem;
@@ -782,7 +1181,7 @@ dialog form input {
   background-color: #fffbb4;
   border-radius: 1.5rem;
 }
-dialog form input:hover {
+dialog#chooseDialog form input:hover {
   background-color: #f7e640;
   outline: solid 2px #49382e;
 }
@@ -880,6 +1279,19 @@ div#shoppingCart {
   background-color: #f1e369;
   border-radius: 50%;
   z-index: 11;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+div#shoppingCart div#numItems {
+  background-color: #008000;
+  position: fixed;
+  padding: 0.5rem;
+  border-radius: 50%;
+  right: 1rem;
+  bottom: 1rem;
+  color: #FFFFFF;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
 }
 div#shoppingCart img {
   width: 4rem;

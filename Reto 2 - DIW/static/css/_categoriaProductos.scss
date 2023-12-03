@@ -1,16 +1,128 @@
 @use "vars";
 
+h1 {
+    font-size: 2rem;
+}
+
+form#formCatProd {
+
+    input[type=search] {
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        outline: solid 1px vars.$color_letra_menu;
+        border: 0;
+        margin: 0.5rem 0.5rem 0.5rem 0;
+        width: 30rem;
+
+        &:focus {
+            outline: solid 2px vars.$color_letra_menu;
+        }
+    }
+
+    input[type=submit] {
+        background-color: #ffffff;
+        border: solid 1px vars.$color_letra_menu;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        margin: 0;
+
+        &:hover {
+            outline: solid 2px vars.$color_letra_menu;
+            background-color: vars.$color_elemento_menu;
+        }
+    }
+}
+
 div.conjuntoProductos {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1rem;
 
     div.producto {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         background-color: #FFFFFF;
         border: solid 0.2rem vars.$color_letra_menu;
         border-radius: 2rem;
         padding: 0.5rem 1rem;
-        min-width: 240px;
+        width: 280px;
+        margin: 0.5rem;
+
+        a{
+            text-decoration: none;
+            color: #000000;
+            margin:0;
+        }
+
+        &.compact {
+            width: 200px;
+        }
+
+        figure {
+            position: relative;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 0.1rem vars.$color_letra_menu;
+            border-radius: 2rem;
+            width: 200px;
+
+            img {
+                height: 10rem;
+                max-width: 10rem;
+                margin: 0.2rem;
+            }
+
+            div.ribbon {
+                position: absolute;
+                transform: rotate(45deg);
+                padding: 0.1rem 10rem;
+                top: 1rem;
+                right: -12.5rem;
+                height: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &.oferta {
+                    background-color: #FF0000;
+
+                    p {
+                        color: #FFFFFF;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+
+                }
+
+                &.tendencia {
+                    background-color: #137DC5;
+
+                    p {
+                        color: #FFFFFF;
+                        text-align: center;
+                        font-size: 0.75rem;
+                    }
+
+                }
+
+                &.nuevo {
+                    background-color: rgb(119, 48, 185);
+
+                    p {
+                        color: #FFFFFF;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+
+                }
+            }
+        }
 
         h3 {
             font-size: 1.5rem;
@@ -30,7 +142,7 @@ div.conjuntoProductos {
             align-items: center;
 
             * {
-                margin: 1rem 0.5rem;
+                margin: 1rem 0.2rem;
             }
 
             h4 {
@@ -44,6 +156,16 @@ div.conjuntoProductos {
             }
         }
 
+        select {
+            width: 10rem;
+            padding: 0.25rem 1rem;
+            border-radius: 0.5rem 0.5rem 0 0;
+
+            option {
+                border-radius: 0.5rem;
+            }
+        }
+
         button {
             background-color: vars.$color_elemento_menu;
             border: none;
@@ -51,11 +173,41 @@ div.conjuntoProductos {
             border-radius: 1rem;
             margin-top: 1rem;
             margin-bottom: 1rem;
-    
+
             &:hover {
                 background-color: vars.$color_fondo_menu;
                 outline: solid 2px vars.$color_letra_menu;
             }
+        }
+    }
+}
+
+div.paginacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1rem;
+        height: 1rem;
+        padding: 0.5rem;
+        margin: 0.25rem;
+        background-color: vars.$color_fondo_menu;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        color: vars.$color_letra_menu;
+        transition: 0.1s;
+
+        &.currentPage{
+            outline: solid 2px vars.$color_letra_menu;
+        }
+
+        &:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 6px;
+            outline: solid 2px vars.$color_letra_menu;
         }
     }
 }

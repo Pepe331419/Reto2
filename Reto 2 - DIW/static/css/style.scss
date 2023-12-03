@@ -5,6 +5,7 @@
 @use "contacto";
 @use "categoriaProductos";
 @use "index";
+@use "admin";
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -229,7 +230,7 @@ section.boxed {
     }
 }
 
-dialog {
+dialog#chooseDialog {
     border-radius: 2rem;
     border: solid 2px vars.$color_letra_menu;
 
@@ -359,6 +360,20 @@ div#shoppingCart {
     background-color: vars.$color_fondo_menu;
     border-radius: 50%;
     z-index: 11;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    div#numItems{
+        background-color: #008000;
+        position: fixed;
+        padding: 0.5rem;
+        border-radius: 50%;
+        right: 1rem;
+        bottom: 1rem;
+        color: #FFFFFF;
+        width: 1.5rem;
+        height: 1.5rem;
+        text-align: center;
+    }
 
     img {
         width: 4rem;

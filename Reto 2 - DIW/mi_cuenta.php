@@ -125,6 +125,8 @@ require("views/head.php");
                     </tbody>
                 </table>
             </div>
+            <h3>Administración</h3>
+            <a href="admin_inventario.php"><button>Acceder a panel de administración</button></a>
         </section>
     </main>
 

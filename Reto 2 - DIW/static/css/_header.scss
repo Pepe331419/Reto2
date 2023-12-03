@@ -10,9 +10,17 @@ header div.desktop {
     top: 0;
     z-index: 8;
 
-    img {
-        width: fit-content;
+    a#goToIndex {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-left: 1rem;
+
+        img {
+            width: 10rem;
+            height: 10rem;
+        }
     }
 
     nav {
@@ -89,14 +97,14 @@ header div.desktop {
 }
 
 @media only screen and (max-width: 1239px) {
-    li{
+    li {
         min-width: 5rem !important;
 
-        ul.submenu{
+        ul.submenu {
             min-width: 7rem !important;
         }
 
-        *{
+        * {
             font-size: 1rem;
         }
     }
@@ -147,17 +155,17 @@ header div.mobile {
             padding: 0.5rem;
         }
 
-        &:not(.mobileNav){
+        &:not(.mobileNav) {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 7rem;
             height: 7rem;
             padding-left: 0.5rem;
-            
-            img{
+
+            img {
                 height: 7rem;
-                width: 7rem;       
+                width: 7rem;
             }
         }
 
